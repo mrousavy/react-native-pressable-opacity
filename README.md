@@ -1,6 +1,9 @@
-
 <div align="center">
-  <h2>react-native-pressable-opacity</h2>
+  <h2 align="center">A Pressable that lowers opacity when pressed.</h2>
+  <pre align="center">
+    <code>npm i react-native-pressable-opacity</code>
+  </pre>
+  <a align="center" href="https://npmjs.org/react-native-pressable-opacity"><img align="center" src="https://img.shields.io/npm/v/react-native-pressable-opacity?color=%237f78d2"></a>
 </div>
 
 ### `<PressableOpacity>`
