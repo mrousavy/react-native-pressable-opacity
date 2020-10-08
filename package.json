@@ -1,6 +1,6 @@
 {
   "name": "react-native-pressable-opacity",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A <PressableOpacity> and a supercharged <NativePressableOpacity> components for React Native",
   "main": "index.js",
   "scripts": {
