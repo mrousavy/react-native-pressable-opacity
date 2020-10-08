@@ -25,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/mrousavy/react-native-pressable-opacity/issues"
   },
-  "homepage": "https://github.com/mrousavy/react-native-pressable-opacity#readme"
+  "homepage": "https://github.com/mrousavy/react-native-pressable-opacity#readme",
+  "devDependencies": {
+    "typescript": "^4.0.3"
+  }
 }
