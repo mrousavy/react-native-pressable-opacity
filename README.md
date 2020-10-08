@@ -7,6 +7,12 @@
 
 A component for responding to touches using the new [JS `Pressability` API](https://reactnative.dev/docs/pressable).
 
+```jsx
+<PressableOpacity onPress={onBuyPressed} style={styles.buyButton}>
+  <Text>Buy this Product</Text>
+</PressableOpacity>
+```
+
 The following props are supported:
 
 <table>
@@ -48,6 +54,14 @@ The following props are supported:
 > Requires `react-native-gesture-handler` and `react-native-reanimated` (v2)
 
 A component for responding to touches using the native [`TapGestureHandler`](https://docs.swmansion.com/react-native-gesture-handler/docs/handler-tap/) without ever going over the JS Bridge. Use this component if you want your Pressables to be able to receive touches, respond to touches, show visual animated feedback (opacity change) and dispatch a callback to JS without using the React Native Thread at all. This component will always be pressable, even when the React Native (JS) Thread freezes because of a heavy JS computation.
+
+> ⚠️ Warning: This does not work in Modals on Android devices. See [software-mansion/react-native-gesture-handler issue #139](https://github.com/software-mansion/react-native-gesture-handler/issues/139)
+
+```jsx
+<NativePressableOpacity onPress={onBuyPressed} style={styles.buyButton}>
+  <Text>Buy this Product</Text>
+</NativePressableOpacity>
+```
 
 The following props are supported:
 
