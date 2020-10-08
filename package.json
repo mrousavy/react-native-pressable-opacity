@@ -22,15 +22,20 @@
   ],
   "author": "mrousavy",
   "license": "ISC",
+  "files": [
+    "dist"
+  ],
   "bugs": {
     "url": "https://github.com/mrousavy/react-native-pressable-opacity/issues"
   },
   "homepage": "https://github.com/mrousavy/react-native-pressable-opacity#readme",
   "peerDependencies": {
-    "react-native": "*"
+    "react-native": "*",
+    "react": "*"
   },
   "devDependencies": {
     "@types/react-native": "latest",
+    "@types/react": "latest",
     "typescript": "^4.0.3"
   }
 }
