@@ -1,0 +1,29 @@
+{
+  "name": "react-native-pressable-opacity",
+  "version": "1.0.0",
+  "description": "A <PressableOpacity> component for React Native",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrousavy/react-native-pressable-opacity.git"
+  },
+  "keywords": [
+    "react",
+    "native",
+    "pressable",
+    "opacity",
+    "component",
+    "module",
+    "pressability",
+    "button"
+  ],
+  "author": "mrousavy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrousavy/react-native-pressable-opacity/issues"
+  },
+  "homepage": "https://github.com/mrousavy/react-native-pressable-opacity#readme"
+}
