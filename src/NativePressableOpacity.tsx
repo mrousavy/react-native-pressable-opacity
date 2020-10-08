@@ -16,7 +16,7 @@ export interface PressableOpacityProps extends ViewProps, Reanimated.WithTimingC
 	children: React.ReactNode;
 	/**
 	 * The opacity to use when the Pressable is being pressed.
-	 * @default 0.5
+	 * @default 0.2
 	 */
 	activeOpacity?: number;
 
