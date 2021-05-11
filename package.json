@@ -24,7 +24,7 @@
     "button"
   ],
   "author": "mrousavy",
-  "license": "ISC",
+  "license": "MIT",
   "files": [
     "dist",
     "src"
