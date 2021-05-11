@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "react-native-vision-camera": ["./src/index"]
+      "react-native-pressable-opacity": ["./src/index"]
     },
     "allowJs": false,
     "allowUnreachableCode": false,
@@ -19,12 +19,11 @@
     "noStrictGenericChecks": false,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noUncheckedIndexedAccess": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
     "target": "esnext",
-    "outDir": "lib"
+    "outDir": "dist"
   },
   "include": [
     "src",
@@ -35,7 +34,7 @@
   ],
   "exclude": [
     "node_modules",
-    "lib",
+    "dist",
     "docs"
   ]
 }

@@ -7,7 +7,7 @@
   "react-native": "src/index",
   "source": "src/index",
   "scripts": {
-    "build": "typescript --noEmit false"
+    "build": "tsc --noEmit false"
   },
   "repository": {
     "type": "git",
