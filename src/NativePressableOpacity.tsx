@@ -46,7 +46,7 @@ export interface NativePressableOpacityProps extends ViewProps, Reanimated.WithT
 /**
  * A Pressable that lowers opacity when pressed. Uses the native responder system from react-native-gesture-handler instead of the JS Pressability API.
  */
-export default function NativePressableOpacity(props: NativePressableOpacityProps): React.ReactElement {
+export function NativePressableOpacity(props: NativePressableOpacityProps): React.ReactElement {
 	const { activeOpacity = 0.2, isInList, duration = 50, easing = Easing.linear, disabled = false, ref, style, onPress, ...passThroughProps } = props;
 
 	const opacity = useSharedValue(1);

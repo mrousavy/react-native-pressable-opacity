@@ -18,7 +18,7 @@ export interface PressableOpacityProps extends PressableProps {
 
 export type StyleType = (state: PressableStateCallbackType) => StyleProp<ViewStyle>;
 
-export default function PressableOpacity({
+export function PressableOpacity({
 	style,
 	disabled = false,
 	disabledOpacity = 0.3,
@@ -40,8 +40,3 @@ export default function PressableOpacity({
 
 	return <Pressable style={_style} disabled={disabled} {...passThroughProps} />;
 }
-
-// TODO: REMOVE PLACEHOLDER PressableOpacity
-// export default function PressableOpacity(props: TouchableOpacityProps & { children?: React.ReactNode }): React.ReactElement {
-// 	return <TouchableOpacity delayPressIn={0} {...props} />;
-// }
