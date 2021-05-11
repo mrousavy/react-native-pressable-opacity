@@ -12,7 +12,7 @@ import Reanimated, {
 } from 'react-native-reanimated';
 import { PRESSABLE_IN_LIST_DELAY } from './Constants';
 
-export interface PressableOpacityProps extends ViewProps, Reanimated.WithTimingConfig {
+export interface NativePressableOpacityProps extends ViewProps, Reanimated.WithTimingConfig {
 	children: React.ReactNode;
 	/**
 	 * The opacity to use when the Pressable is being pressed.
@@ -46,7 +46,7 @@ export interface PressableOpacityProps extends ViewProps, Reanimated.WithTimingC
 /**
  * A Pressable that lowers opacity when pressed. Uses the native responder system from react-native-gesture-handler instead of the JS Pressability API.
  */
-export default function NativePressableOpacity(props: PressableOpacityProps): React.ReactElement {
+export default function NativePressableOpacity(props: NativePressableOpacityProps): React.ReactElement {
 	const { activeOpacity = 0.2, isInList, duration = 50, easing = Easing.linear, disabled = false, ref, style, onPress, ...passThroughProps } = props;
 
 	const opacity = useSharedValue(1);
