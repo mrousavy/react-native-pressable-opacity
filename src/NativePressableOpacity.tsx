@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { ViewProps } from 'react-native';
+import type { ViewProps } from 'react-native';
 import { TapGestureHandler, TapGestureHandlerGestureEvent } from 'react-native-gesture-handler';
 import Reanimated, {
 	cancelAnimation,
