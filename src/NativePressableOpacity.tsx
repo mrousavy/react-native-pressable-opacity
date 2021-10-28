@@ -10,6 +10,7 @@ import Reanimated, {
 	withTiming,
 	useDerivedValue,
 	WithTimingConfig,
+	runOnJS,
 } from 'react-native-reanimated';
 import { PRESSABLE_IN_LIST_DELAY } from './Constants';
 
@@ -83,7 +84,7 @@ export function NativePressableOpacity(props: NativePressableOpacityProps): Reac
 				isPressed.value = true
 			},
 			onEnd: () => {
-				onPress();
+				runOnJS(onPress)();
 			},
 			onFinish: () => {
 				isPressed.value = false
