@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import type { ViewProps } from 'react-native';
-import { TapGestureHandler, TapGestureHandlerGestureEvent } from 'react-native-gesture-handler';
+import { Gesture, GestureDetector } from 'react-native-gesture-handler';
 import Reanimated, {
 	withDelay,
 	Easing,
@@ -78,24 +78,20 @@ export function NativePressableOpacity(props: NativePressableOpacityProps): Reac
 
 	const animatedStyle = useAnimatedStyle(() => ({ opacity: opacity.value }), [opacity]);
 
-	const onGestureEvent = useAnimatedGestureHandler<TapGestureHandlerGestureEvent>(
-		{
-			onStart: () => {
-				isPressed.value = true
-			},
-			onEnd: () => {
-				runOnJS(onPress)();
-			},
-			onFinish: () => {
-				isPressed.value = false
-			},
-		},
-		[isPressed, onPress],
-	);
-
+	const tap = Gesture.Tap()
+    		.onStart(() => { 
+			isPressed.value = true
+		})
+		.onEnd(() => {
+			runOnJS(onPress)();
+		})
+		.onFinalize(() => {
+			isPressed.value = false
+		});
+	
 	return (
-		<TapGestureHandler ref={ref} onGestureEvent={onGestureEvent} enabled={!disabled} shouldCancelWhenOutside={true}>
+		<GestureDetector ref={ref} gesture={tap} enabled={!disabled} shouldCancelWhenOutside={true}>
 			<Reanimated.View style={[style, animatedStyle]} {...passThroughProps} />
-		</TapGestureHandler>
+		</GestureDetector>
 	);
 }
