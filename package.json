@@ -1,6 +1,6 @@
 {
   "name": "react-native-pressable-opacity",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "A <PressableOpacity> and a supercharged <NativePressableOpacity> components for React Native",
   "main": "dist/index",
   "types": "dist/index.d.ts",
