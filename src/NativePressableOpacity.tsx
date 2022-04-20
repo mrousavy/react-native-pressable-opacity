@@ -1,10 +1,9 @@
 import React, { useMemo } from 'react';
 import type { ViewProps } from 'react-native';
-import { Gesture, GestureDetector } from 'react-native-gesture-handler';
+import { Gesture, GestureDetector, GestureType } from 'react-native-gesture-handler';
 import Reanimated, {
 	withDelay,
 	Easing,
-	useAnimatedGestureHandler,
 	useAnimatedStyle,
 	useSharedValue,
 	withTiming,
@@ -48,7 +47,7 @@ export interface NativePressableOpacityProps extends ViewProps, WithTimingConfig
 	/**
 	 * Ref to the `GestureDetector`
 	 */
-	ref?: React.RefObject<GestureDetector>;
+	ref?: React.MutableRefObject<GestureType | undefined>
 }
 
 /**
@@ -78,8 +77,8 @@ export function NativePressableOpacity(props: NativePressableOpacityProps): Reac
 
 	const animatedStyle = useAnimatedStyle(() => ({ opacity: opacity.value }), [opacity]);
 
-	const tap = Gesture.Tap()
-    		.onStart(() => { 
+	let tap = Gesture.Tap()
+		.onStart(() => {
 			isPressed.value = true
 		})
 		.onEnd(() => {
@@ -87,10 +86,13 @@ export function NativePressableOpacity(props: NativePressableOpacityProps): Reac
 		})
 		.onFinalize(() => {
 			isPressed.value = false
-		});
-	
+		}).enabled(!disabled).shouldCancelWhenOutside(true);
+	if (ref != null) {
+		tap = tap.withRef(ref)
+	}
+
 	return (
-		<GestureDetector ref={ref} gesture={tap} enabled={!disabled} shouldCancelWhenOutside={true}>
+		<GestureDetector gesture={tap}>
 			<Reanimated.View style={[style, animatedStyle]} {...passThroughProps} />
 		</GestureDetector>
 	);

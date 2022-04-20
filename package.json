@@ -1,6 +1,6 @@
 {
   "name": "react-native-pressable-opacity",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "A <PressableOpacity> and a supercharged <NativePressableOpacity> components for React Native",
   "main": "dist/index",
   "types": "dist/index.d.ts",
@@ -44,7 +44,7 @@
     "@types/react-native": "0.64.4",
     "react": "17.0.2",
     "react-native": "0.64.0",
-    "react-native-gesture-handler": "latest",
+    "react-native-gesture-handler": "^2.4.0",
     "react-native-reanimated": "^2.3.0-beta.3",
     "typescript": "^4.0.3"
   }
