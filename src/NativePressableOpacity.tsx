@@ -46,9 +46,9 @@ export interface NativePressableOpacityProps extends ViewProps, WithTimingConfig
 	disabled?: boolean;
 
 	/**
-	 * Ref to the `TapGestureHandler`
+	 * Ref to the `GestureDetector`
 	 */
-	ref?: React.RefObject<TapGestureHandler>;
+	ref?: React.RefObject<GestureDetector>;
 }
 
 /**
